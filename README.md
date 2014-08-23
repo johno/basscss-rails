@@ -1,6 +1,6 @@
-# Basscss
+# BASSCSS for Rails
 
-Include BASSCSS in your Rails apps through the assets pipeline.
+Include BASSCSS, the next-level CSS toolkit, in your Rails apps through the assets pipeline.
 
 Repackaged from <https://github.com/jxnblk/basscss> by Brent Jackson.
 
