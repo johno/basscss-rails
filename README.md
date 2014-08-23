@@ -1,12 +1,16 @@
 # Basscss
 
+Include BASSCSS in your Rails apps through the assets pipeline.
+
 Repackaged from <https://github.com/jxnblk/basscss> by Brent Jackson.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'basscss'
+```ruby
+gem 'basscss'
+```
 
 And then execute:
 
@@ -16,13 +20,41 @@ Or install it yourself as:
 
     $ gem install basscss
 
+##### Using Sass
+
+You will then need to require the stylesheet in your application.scss:
+
+```scss
+@import "basscss";
+```
+
+There's also a lite version of BASSCSS, which can be included instead:
+
+```scss
+@import "basscss-lite";
+```
+
+##### Using CSS
+
+Or, in your application.css:
+
+```css
+*= require basscss;
+```
+
+Or, for BASSCSS lite:
+
+```css
+*= require clrs-saturated;
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+Further documentation can be found on the BASSCSS website: <http://www.basscss.com/docs/>
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/basscss/fork )
+1. Fork it ( https://github.com/johnotander/basscss/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
