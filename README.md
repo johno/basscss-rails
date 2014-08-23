@@ -25,13 +25,13 @@ Or install it yourself as:
 You will then need to require the stylesheet in your application.scss:
 
 ```scss
-@import "basscss";
+@import "basscss/basscss";
 ```
 
 There's also a lite version of BASSCSS, which can be included instead:
 
 ```scss
-@import "basscss-lite";
+@import "basscss/basscss-lite";
 ```
 
 ##### Using CSS
@@ -39,13 +39,13 @@ There's also a lite version of BASSCSS, which can be included instead:
 Or, in your application.css:
 
 ```css
-*= require basscss;
+*= require basscss/basscss;
 ```
 
 Or, for BASSCSS lite:
 
 ```css
-*= require clrs-saturated;
+*= require basscss/basscss-lite;
 ```
 
 ## Usage

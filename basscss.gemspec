@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'basscss/version'
+require 'basscss/rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "basscss"
-  spec.version       = Basscss::VERSION
+  spec.name          = "basscss-rails"
+  spec.version       = Basscss::Rails::VERSION
   spec.authors       = ["John Otander"]
   spec.email         = ["johnotander@gmail.com"]
   spec.summary       = %q{Include BASSCSS in your Rails apps.}
