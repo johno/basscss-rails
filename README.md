@@ -9,7 +9,7 @@ Repackaged from <https://github.com/jxnblk/basscss> by Brent Jackson.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'basscss'
+gem 'basscss-rails'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install basscss
+    $ gem install basscss-rails
 
 ##### Using Sass
 
