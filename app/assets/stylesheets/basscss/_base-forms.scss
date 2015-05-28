@@ -59,47 +59,62 @@ $breakpoint-sm: '(min-width: 40em)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
 
-/* Basscss Color Borders */
+/* Basscss Base Forms */
 
-.border {
-  border-style: solid;
-  border-width: $border-width;
-  border-color: $border-color;
+input,
+select,
+textarea,
+fieldset {
+  font-size: $form-field-font-size;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.border-top {
-  border-top-style: solid;
-  border-top-width: $border-width;
-  border-top-color: $border-color;
+input[type=text],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  box-sizing: border-box;
+  height: $form-field-height;
+  padding: $form-field-padding-y $form-field-padding-x;
+  vertical-align: middle;
+  -webkit-appearance: none;
 }
 
-.border-right {
-  border-right-style: solid;
-  border-right-width: $border-width;
-  border-right-color: $border-color;
+select {
+  box-sizing: border-box;
+  line-height: 1.75;
+  padding: $form-field-padding-y $form-field-padding-x;
 }
 
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width;
-  border-bottom-color: $border-color;
+select:not([multiple]) {
+  height: $form-field-height;
+  vertical-align: middle;
 }
 
-.border-left {
-  border-left-style: solid;
-  border-left-width: $border-width;
-  border-left-color: $border-color;
+textarea {
+  box-sizing: border-box;
+  line-height: 1.75;
+  padding: $form-field-padding-y $form-field-padding-x;
 }
 
-.rounded { border-radius: $border-radius }
-.circle  { border-radius: 50% }
-
-.rounded-top    { border-radius: $border-radius $border-radius 0 0 }
-.rounded-right  { border-radius: 0 $border-radius $border-radius 0 }
-.rounded-bottom { border-radius: 0 0 $border-radius $border-radius }
-.rounded-left   { border-radius: $border-radius 0 0 $border-radius }
-
-.not-rounded { border-radius: 0 }
+.fieldset-reset {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border: 0;
+}
+.fieldset-reset legend {
+  padding: 0;
+}
 
 /* Basscss Defaults */
 

@@ -52,6 +52,11 @@ $darken-4: rgba(0,0,0,.5) !default;
 $border-width: 1px !default;
 $border-radius: 3px !default;
 $border-color: $darken-2 !default;
+$button-font-size: inherit !default;
+$button-font-weight: $bold-font-weight /* Fallback value:  bold */ !default;
+$button-line-height: 1.125rem !default;
+$button-padding-y: .5rem !default;
+$button-padding-x: 1rem !default;
 
 // Custom Media Query Variables
 
@@ -59,47 +64,38 @@ $breakpoint-sm: '(min-width: 40em)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
 
-/* Basscss Color Borders */
+/* Basscss Base Buttons */
 
-.border {
-  border-style: solid;
-  border-width: $border-width;
-  border-color: $border-color;
+button,
+.button {
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: $button-line-height;
+  padding: $button-padding-y $button-padding-x;
+  margin: 0;
+  height: auto;
+  border: $border-width solid transparent;
+  vertical-align: middle;
+  -webkit-appearance: none;
 }
 
-.border-top {
-  border-top-style: solid;
-  border-top-width: $border-width;
-  border-top-color: $border-color;
+button:after,
+button:before,
+.button:after,
+.button:before {
+  box-sizing: border-box;
 }
 
-.border-right {
-  border-right-style: solid;
-  border-right-width: $border-width;
-  border-right-color: $border-color;
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width;
-  border-bottom-color: $border-color;
-}
-
-.border-left {
-  border-left-style: solid;
-  border-left-width: $border-width;
-  border-left-color: $border-color;
-}
-
-.rounded { border-radius: $border-radius }
-.circle  { border-radius: 50% }
-
-.rounded-top    { border-radius: $border-radius $border-radius 0 0 }
-.rounded-right  { border-radius: 0 $border-radius $border-radius 0 }
-.rounded-bottom { border-radius: 0 0 $border-radius $border-radius }
-.rounded-left   { border-radius: $border-radius 0 0 $border-radius }
-
-.not-rounded { border-radius: 0 }
+.button:hover { text-decoration: none }
 
 /* Basscss Defaults */
 

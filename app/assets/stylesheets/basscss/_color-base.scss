@@ -52,6 +52,9 @@ $darken-4: rgba(0,0,0,.5) !default;
 $border-width: 1px !default;
 $border-radius: 3px !default;
 $border-color: $darken-2 !default;
+$link-color: $blue !default;
+$button-background-color: $blue !default;
+$pre-background-color: transparent !default;
 
 // Custom Media Query Variables
 
@@ -59,47 +62,67 @@ $breakpoint-sm: '(min-width: 40em)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
 
-/* Basscss Color Borders */
+/* Basscss Color Base */
 
-.border {
-  border-style: solid;
-  border-width: $border-width;
-  border-color: $border-color;
+body {
+  color: $black;
+  background-color: white;
 }
 
-.border-top {
-  border-top-style: solid;
-  border-top-width: $border-width;
-  border-top-color: $border-color;
+a {
+  color: $link-color;
+  text-decoration: none;
 }
 
-.border-right {
-  border-right-style: solid;
-  border-right-width: $border-width;
-  border-right-color: $border-color;
+a:hover {
+  text-decoration: underline;
 }
 
-.border-bottom {
+pre, code {
+  background-color: $pre-background-color;
+  border-radius: $border-radius;
+}
+
+hr {
+  border: 0;
   border-bottom-style: solid;
   border-bottom-width: $border-width;
   border-bottom-color: $border-color;
 }
 
-.border-left {
-  border-left-style: solid;
-  border-left-width: $border-width;
-  border-left-color: $border-color;
+.button {
+  color: white;
+  background-color: $button-background-color;
+  border-radius: $border-radius;
+  -webkit-transition-duration: .05s;
+          transition-duration: .05s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-property: box-shadow, background-color;
+          transition-property: box-shadow, background-color;
 }
 
-.rounded { border-radius: $border-radius }
-.circle  { border-radius: 50% }
+.button:hover {
+  box-shadow: inset 0 0 0 20rem $darken-1;
+}
 
-.rounded-top    { border-radius: $border-radius $border-radius 0 0 }
-.rounded-right  { border-radius: 0 $border-radius $border-radius 0 }
-.rounded-bottom { border-radius: 0 0 $border-radius $border-radius }
-.rounded-left   { border-radius: $border-radius 0 0 $border-radius }
+.button:focus {
+  outline: none;
+  border-color: $darken-2;
+  box-shadow: 0 0 0 3px $darken-3;
+}
 
-.not-rounded { border-radius: 0 }
+.button:active,
+.button.is-active {
+  box-shadow: inset 0 0 0 20rem $darken-2,
+    inset 0 3px 4px 0 $darken-3,
+    0 0 1px $darken-2;
+}
+
+.button:disabled,
+.button.is-disabled {
+  opacity: .5;
+}
 
 /* Basscss Defaults */
 

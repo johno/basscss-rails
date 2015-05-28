@@ -59,47 +59,68 @@ $breakpoint-sm: '(min-width: 40em)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
 
-/* Basscss Color Borders */
+/* Basscss Button Outline */
 
-.border {
-  border-style: solid;
-  border-width: $border-width;
-  border-color: $border-color;
+.button-outline {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  background-color: transparent;
+  border-radius: $border-radius;
+  border: $border-width solid currentcolor;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-property: box-shadow, background-color;
+          transition-property: box-shadow, background-color;
 }
 
-.border-top {
-  border-top-style: solid;
-  border-top-width: $border-width;
-  border-top-color: $border-color;
+.button-outline:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -$border-width;
+  right: -$border-width;
+  bottom: -$border-width;
+  left: -$border-width;
+  border: $border-width solid transparent;
+  background-color: currentcolor;
+  border-radius: $border-radius;
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-property: opacity;
+          transition-property: opacity;
+  opacity: 0;
 }
 
-.border-right {
-  border-right-style: solid;
-  border-right-width: $border-width;
-  border-right-color: $border-color;
+.button-outline:hover {
+  box-shadow: none;
 }
 
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width;
-  border-bottom-color: $border-color;
+.button-outline:hover:before,
+.button-outline:focus:before {
+  opacity: .125;
 }
 
-.border-left {
-  border-left-style: solid;
-  border-left-width: $border-width;
-  border-left-color: $border-color;
+.button-outline:focus {
+  outline: none;
+  border: $border-width solid currentcolor;
+  box-shadow: 0 0 0 2px;
 }
 
-.rounded { border-radius: $border-radius }
-.circle  { border-radius: 50% }
+.button-outline:active,
+.button-outline.is-active {
+  box-shadow: inset 0 1px 5px 0, 0 0 1px;
+}
 
-.rounded-top    { border-radius: $border-radius $border-radius 0 0 }
-.rounded-right  { border-radius: 0 $border-radius $border-radius 0 }
-.rounded-bottom { border-radius: 0 0 $border-radius $border-radius }
-.rounded-left   { border-radius: $border-radius 0 0 $border-radius }
-
-.not-rounded { border-radius: 0 }
+.button-outline:disabled,
+.button-outline.is-disabled {
+  opacity: .5;
+}
 
 /* Basscss Defaults */
 

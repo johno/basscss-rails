@@ -59,47 +59,48 @@ $breakpoint-sm: '(min-width: 40em)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
 
-/* Basscss Color Borders */
+/* Basscss Color Forms */
 
-.border {
+.field-light {
+  background-color: white;
+  -webkit-transition: box-shadow .2s ease;
+          transition: box-shadow .2s ease;
   border-style: solid;
   border-width: $border-width;
   border-color: $border-color;
+  border-radius: $border-radius;
 }
 
-.border-top {
-  border-top-style: solid;
-  border-top-width: $border-width;
-  border-top-color: $border-color;
+.field-light:focus {
+  outline: none;
+  border-color: $blue;
+  box-shadow: 0 0 0 2px color($blue a(.5));
 }
 
-.border-right {
-  border-right-style: solid;
-  border-right-width: $border-width;
-  border-right-color: $border-color;
+.field-light:disabled {
+  background-color: $darken-2;
+  opacity: .5;
 }
 
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width;
-  border-bottom-color: $border-color;
+.field-light:read-only:not(select) {
+  background-color: $darken-2;
 }
 
-.border-left {
-  border-left-style: solid;
-  border-left-width: $border-width;
-  border-left-color: $border-color;
+.field-light:invalid {
+  border-color: $red;
 }
 
-.rounded { border-radius: $border-radius }
-.circle  { border-radius: 50% }
+.field-light.is-success {
+  border-color: $green;
+}
 
-.rounded-top    { border-radius: $border-radius $border-radius 0 0 }
-.rounded-right  { border-radius: 0 $border-radius $border-radius 0 }
-.rounded-bottom { border-radius: 0 0 $border-radius $border-radius }
-.rounded-left   { border-radius: $border-radius 0 0 $border-radius }
+.field-light.is-warning {
+  border-color: $yellow;
+}
 
-.not-rounded { border-radius: 0 }
+.field-light.is-error {
+  border-color: $red;
+}
 
 /* Basscss Defaults */
 

@@ -28,24 +28,12 @@ You will then need to require the stylesheet in your application.scss:
 @import "basscss/basscss";
 ```
 
-There's also a lite version of BASSCSS, which can be included instead:
-
-```scss
-@import "basscss/basscss-lite";
-```
-
 ##### Using CSS
 
 Or, in your application.css:
 
 ```css
 *= require basscss/basscss;
-```
-
-Or, for BASSCSS lite:
-
-```css
-*= require basscss/basscss-lite;
 ```
 
 ## Usage

@@ -59,47 +59,47 @@ $breakpoint-sm: '(min-width: 40em)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
 
-/* Basscss Color Borders */
+/* Basscss Utility Responsive States */
 
-.border {
-  border-style: solid;
-  border-width: $border-width;
-  border-color: $border-color;
+.sm-show, .md-show, .lg-show {
+  display: none !important
 }
 
-.border-top {
-  border-top-style: solid;
-  border-top-width: $border-width;
-  border-top-color: $border-color;
+@media #{$breakpoint-sm} {
+  .sm-show { display: block !important }
 }
 
-.border-right {
-  border-right-style: solid;
-  border-right-width: $border-width;
-  border-right-color: $border-color;
+@media #{$breakpoint-md} {
+  .md-show { display: block !important }
 }
 
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: $border-width;
-  border-bottom-color: $border-color;
+@media #{$breakpoint-lg} {
+  .lg-show { display: block !important }
 }
 
-.border-left {
-  border-left-style: solid;
-  border-left-width: $border-width;
-  border-left-color: $border-color;
+
+@media #{$breakpoint-sm} {
+  .sm-hide { display: none !important }
 }
 
-.rounded { border-radius: $border-radius }
-.circle  { border-radius: 50% }
+@media #{$breakpoint-md} {
+  .md-hide { display: none !important }
+}
 
-.rounded-top    { border-radius: $border-radius $border-radius 0 0 }
-.rounded-right  { border-radius: 0 $border-radius $border-radius 0 }
-.rounded-bottom { border-radius: 0 0 $border-radius $border-radius }
-.rounded-left   { border-radius: $border-radius 0 0 $border-radius }
+@media #{$breakpoint-lg} {
+  .lg-hide { display: none !important }
+}
 
-.not-rounded { border-radius: 0 }
+.display-none { display: none !important }
+
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 
 /* Basscss Defaults */
 
