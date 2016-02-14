@@ -33,7 +33,7 @@ You will then need to require the stylesheet in your application.scss:
 Or, in your application.css:
 
 ```css
-*= require basscss/basscss;
+*= require basscss/basscss
 ```
 
 ## Usage
