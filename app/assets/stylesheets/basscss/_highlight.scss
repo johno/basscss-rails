@@ -18,12 +18,11 @@ $white: #fff !default;
 $silver: #ddd !default;
 $gray: #aaa !default;
 $black: #111 !default;
-$monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
 $hljs-comment: $gray !default;
 $hljs-keyword: $black !default;
 $hljs-number: $olive !default;
-$hljs-string: $red !default;
-$hljs-title: $red !default;
+$hljs-string: $blue !default;
+$hljs-title: $blue !default;
 $hljs-type: $navy !default;
 $hljs-tag: $navy !default;
 $hljs-attribute: $olive !default;
@@ -164,3 +163,5 @@ $hljs-chunk: $silver !default;
 .hljs-chunk {
   color: $hljs-chunk;
 }
+
+/* Mapped colors */
