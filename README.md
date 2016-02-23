@@ -36,6 +36,24 @@ Or, in your application.css:
 *= require basscss/basscss
 ```
 
+##### Using the [Basscss addons](https://github.com/basscss/addons)
+
+You will need to import the `basscss-addons` file, too:
+
+###### Sass
+
+```scss
+@import "basscss/basscss-addons";
+```
+
+###### CSS
+
+Or, in your application.css:
+
+```css
+*= require basscss/basscss-addons
+```
+
 ## Usage
 
 Further documentation can be found on the BASSCSS website: <http://www.basscss.com/docs/>
